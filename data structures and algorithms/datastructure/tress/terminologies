@@ -1,0 +1,25 @@
+tree is a noon linear data structure .
+itis used to represent the heirarchial data . 
+
+root = topmost node.
+parent = node which connects to the child.
+child = node which is connected by another node is its child.
+leaf = nodes with no children.
+internal node : nodes with atleast one children.
+depth = no of  edges from root to the node .
+height = no of edges from node to the rootnode.
+depth = no of edges from node to the deepest leafsibllings : nodes belonging to the same parent.
+
+
+binary tree =  is a tree whose having maximum of two children per node .
+n nodes -> n-1 edges .
+degree = no of direct children to a node .
+degree of a tree = the maximum number of cildren to a node. 
+
+types of binary tress :
+full bt = all nodes are having maximum of 2 children not more tahn that  . 0,1,2
+perfectbt = all nodes must should have the 2 children and all leafs are at the same level 
+complete bt = all noddes have maximum of 2 children and there is one extra leaf node as left as posible to the tree.
+degenerate tree = is the tree that has only one children for every  node
+skewed tree: onlly one side of the tree is continued either left or right 
+right skewed or left skewed respectively

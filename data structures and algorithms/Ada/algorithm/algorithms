@@ -1,0 +1,36 @@
+Design and Analysis of Algorithms is a fundamental aspect of
+ computer science that involves creating efficient solutions 
+ to computational problems and evaluating their performance.
+  DSA focuses on designing algorithms that effectively address 
+  specific challenges and analyzing their efficiency in terms of time and space complexity
+
+
+
+
+  Asymptotic Analysis is the big idea that handles the above issues in analyzing algorithms. In Asymptotic Analysis, we evaluate the performance of an algorithm in terms of input size (we don’t measure the actual running time). We calculate, how the time (or space) taken by an algorithm increases with the input size.
+
+
+  Big O notation (O): This notation provides an upper bound on the growth rate of an algorithm’s running time or space usage. It represents the worst-case scenario, i.e., the maximum amount of time or space an algorithm may need to solve a problem. For example, if an algorithm’s running time is O(n), then it means that the running time of the algorithm increases linearly with the input size n or less.
+
+
+  Omega notation (?): This notation provides a lower bound on the growth rate of an algorithm’s running time or space usage. It represents the best-case scenario, i.e., the minimum amount of time or space an algorithm may need to solve a problem. For example, if an algorithm’s running time is ?(n), then it means that the running time of the algorithm increases linearly with the input size n or more.
+
+
+Theta notation (?): This notation provides both an upper and lower bound on the growth rate of an algorithm’s running time or space usage. It represents the average-case scenario, i.e., the amount of time or space an algorithm typically needs to solve a problem. For example, if an algorithm’s running time is ?(n), then it means that the running time of the algorithm increases linearly with the input size n
+
+
+we always take the BIG O notation for the calculation of the time complexity because we always prefer large value of n 
+for large value system need to performm as fast as possible to do so we keep a bouded limit to certain functions that are 
+used inside the algorithm that would help us not to design the algorithm not to exeed the limit that is been given
+
+also we do calcualte for the large value of input beacuse we have large data to analyze
+and there should be fast in fetching the data specifically
+
+based on the  problem requirements and time limit we choose the best algorithm and apply the best datasructure to 
+store the data and retrieve data 
+
+this is where the time complexity come in 
+
+
+
+

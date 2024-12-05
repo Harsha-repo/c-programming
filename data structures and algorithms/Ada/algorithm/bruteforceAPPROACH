@@ -1,0 +1,10 @@
+BRUTE FORCE APPROACH:  it is approach where we traverse the give datastructure completely 
+it is an approach where the alogorithm meets all different methods or options or scenarios untill the solution is found
+
+because of the high temporal complexity we see that they become slow when it comes the larger inputs 
+
+different sorting methods using BF approch are 
+1.selection sort
+2.bubble sort
+3.sequential search
+4.pattern matching is also included

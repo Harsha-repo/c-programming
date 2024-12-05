@@ -1,0 +1,10 @@
+A greedy algorithm is a problem-solving technique that makes the best local choice at each step in the hope of finding the global optimum solution. It prioritizes immediate benefits over long-term consequences, making decisions based on the current situation without considering future implications. While this approach can be efficient and straightforward, it doesn’t guarantee the best overall outcome for all problems
+
+Characteristics of Greedy Algorithm
+Here are the characteristics of a greedy algorithm:
+
+Greedy algorithms are simple and easy to implement.
+They are efficient in terms of time complexity, often providing quick solutions.
+Greedy algorithms are used for optimization problems where a locally optimal choice leads to a globally optimal solution.
+These algorithms do not reconsider previous choices, as they make decisions based on current information without looking ahead.
+Greedy algorithms are suitable for problems for optimal substructure.
