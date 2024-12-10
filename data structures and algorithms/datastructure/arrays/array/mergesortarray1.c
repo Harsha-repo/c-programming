@@ -1,88 +1,45 @@
-// nums1=[0,4,8,9,0,0,0,0]  m = 4
-// nums2=[5,6]  n = 2
-//nums3=[2,3]  o=2
+#include <stdio.h>
 
+int main() {
+    int nums1[] = {0, 4, 8, 9, 0, 0, 0, 0}; // nums1 has extra space
+    int nums2[] = {5, 6};
+    int nums3[] = {2, 3};
 
-#include<stdio.h>
+    int m = 4; // Size of valid elements in nums1
+    int n = 2; // Size of nums2
+    int o = 2; // Size of nums3
 
+    int p1 = m - 1;         // Pointer for nums1
+    int p2 = n - 1;         // Pointer for nums2
+    int p3 = o - 1;         // Pointer for nums3
+    int p = m + n + o - 1;  // Pointer for the end of nums1
 
-int main(){
-
-    int nums1[]={0,4,8,9,0,0,0,0};
-    int nums2[]={5,6};
-    int nums3[]={2,3};
-
-    int m = 4;
-    int n = 2;
-    int o = 2;
-
-
-    int p=m+n+o;
-    int p1=m-1;
-    int p2 = n-1;
-    int p3=o-1; 
-
-    while(p1>=0 && p2>=0 && p3>=0){
-        
-
-        if(nums1[p1]<nums2[p2] && nums1[p1]<nums3[p3] && nums2[p2]<nums3[p3]){
-            nums1[p]=nums3[p3];
+    // Merge nums2 and nums3 into nums1
+    while (p1 >= 0 || p2 >= 0 || p3 >= 0) {
+        if (p1 >= 0 && (p2 < 0 || nums1[p1] >= nums2[p2]) && (p3 < 0 || nums1[p1] >= nums3[p3])) {
+            nums1[p] = nums1[p1];
             p1--;
+        } else if (p2 >= 0 && (p3 < 0 || nums2[p2] >= nums3[p3])) {
+            nums1[p] = nums2[p2];
             p2--;
+        } else if (p3 >= 0) {
+            nums1[p] = nums3[p3];
             p3--;
         }
-        else if(nums1[p1]<nums2[p2] && nums1[p1]<nums3[p3] && nums2[p2]>nums3[p3]){
-            nums1[p]=nums2[p2];
-            p1--;
-            p2--;
-            p3--;
-        }
-
-        else if(nums2[p2]<nums1[p1] && nums2[p2]<nums3[p3] && nums1[p1]<nums3[p3]){
-            nums1[p]=nums3[p3];
-            p1--;
-            p2--;
-            p3--;
-        }
-
-        else if(nums2[p2]<nums1[p1] && nums2[p2]<nums3[p3] && nums1[p1]>nums3[p3]){
-            nums1[p]=nums1[p1];
-            p1--;
-            p2--;
-            p3--;
-        }
-        else if(nums3[p3]<nums1[p1] && nums3[p3]<nums2[p2] && nums1[p1]<nums2[p2]){
-            nums1[p]=nums2[p2];
-            p1--;
-            p2--;
-            p3--;
-        }
-        else{
-            nums1[p]=nums1[p1];
-            p1--;
-            p2--;
-            p3--;
-        }
-
         p--;
     }
 
-    while(p2>=0){
-        nums1[p]=nums2[p2];
-        p--;
-        p2--;
+    // Print the merged and sorted array
+    printf("Merged array: ");
+    for (int i = 0; i < m + n + o; i++) {
+        printf("%d ", nums1[i]);
     }
+    printf("\n");
 
-    while(p3>=0){
-        nums1[p]=nums2[p2];
-        p--;
-        p2--;
-    }
-
-    for(int i=0;i<n+m+o;i++){
-        printf("%d",nums1[i]);
-    }
-
-
-    return 0;  
+    return 0;
 }
+
+// inside if p1>0 elements are still present in the array 
+//p1<0 is ensuring that the p2 array having some elements left in the array if this is false then there is no comparison done in next step
+//nums1[p1] >= nums2[p2] comparing the elements of the two array 1 and 2 checking nullity of arrays before comparison
+// same way 1 and 3 are compared  p3 < 0 || nums1[p1] >= nums3[p3])
